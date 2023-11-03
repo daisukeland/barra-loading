@@ -1,0 +1,31 @@
+{
+	"name": "bar_loading",
+	"version": "1.0.0",
+	"description": "easy to use progress-bar for command-line/terminal applications",
+	"keywords": [
+		"cli",
+		"terminal",
+		"progress",
+		"progressbar",
+		"multibar",
+		"bar",
+		"status",
+		"statusbar"
+	],
+	"homepage": "https://github.com/daisukeland/bar_loading",
+	"bugs": "https://github.com/daisukeland/bar_loading/issues",
+	"repository": "daisukeland/bar_loading",
+	"files": [
+		"src/"
+	],
+	"engines": {
+		"node": ">=1.10"
+	},
+	"author": "Daisuke (https://github.com/daisukeland)",
+	"license": "MIT",
+	"main": "./src/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {}
+}
