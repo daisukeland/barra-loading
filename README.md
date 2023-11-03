@@ -61,7 +61,7 @@ Inicializa una nueva barra de progreso. ¡Una instancia se puede utilizar varias
 ```js
 const barLoad = require('barra-loading');
 
-const <instance> = new barLoad.Single(options:object [, preset:object]);
+const <instance> = new barLoad.Single(options:<object> [, preset:<object>]);
 ```
 
 #### Main Options ####
@@ -72,11 +72,11 @@ const <instance> = new barLoad.Single(options:object [, preset:object]);
 Starts the progress bar and set the total and initial value
 
 ```js
-<instance>.start(totalValue:int, startValue:int [, payload:object = {}]);
+<instance>.start(totalValue:<int>, startValue:<int> [, payload:<object> = {}]);
 ```
 ###  <instance>.update() ###
 ```js
-<instance>.update([currentValue:int [, payload:object = {}]]);
+<instance>.update([currentValue:<int> [, payload:<object> = {}]]);
 
 ```
 ### <instance>.stop() ###
@@ -95,17 +95,17 @@ Inicialice un nuevo contenedor multiprogreso. Es necesario agregar barras. ¡Las
 ```js
 const barLoad = require('barra-loading');
 
-const <instance> = new barLoad.Mutli(options:object [, preset:object]);
+const <instance> = new barLoad.Mutli(options:<object> [, preset:<object>]);
 ```
 
 ### <instance>.create() ###
 
 Agrega una nueva barra de progreso al contenedor e inicia la barra. Devuelve un objeto `Single` normal que se puede controlar individualmente.
 
-Se pueden pasar `Options` adicionales directamente a la [barra genérica] (lib/generic-bar.js) para anular las opciones globales para una instancia de barra única. Esto puede resultar útil para cambiar la apariencia de un objeto de barra única. Pero tenga paciencia: esto sólo debe usarse para anular formatos; NO intente configurar otras opciones globales como la terminal, indicadores sincrónicos, etc.
+Se pueden pasar `Options` adicionales directamente a la [barra genérica] (lib/generic-bar.js) para anular las opciones globales para una instancia de barra única. Esto puede resultar útil para cambiar la apariencia de un objeto de barra única. Pero tenga paciencia: esto sólo debe usarse para anular formatos; NO <int>ente configurar otras opciones globales como la terminal, indicadores sincrónicos, etc.
 
 ```js
-const <barInstance> = <instance>.create(totalValue:int, startValue:int [, payload:object = {} [, barOptions:object = {}]]);
+const <barInstance> = <instance>.create(totalValue:<int>, startValue:<int> [, payload:<object> = {} [, barOptions:<object> = {}]]);
 ```
 
 ### <instance>.remove() ###
@@ -113,7 +113,7 @@ const <barInstance> = <instance>.create(totalValue:int, startValue:int [, payloa
 Elimina una barra existente del contenedor de progreso múltiple.
 
 ```js
-<instance>.remove(<barInstance>:object);
+<instance>.remove(<barInstance>:<object>);
 ```
 
 ### <instance>.stop() ###
@@ -139,7 +139,7 @@ Genera contenido (buffered) encima de las barras múltiples durante la operació
 Bar Formatting
 -----------------------------------
 
-La barra de progreso se puede personalizar utilizando los siguientes marcadores de posición integrados. Se pueden combinar en cualquier orden.
+La barra de progreso se puede personalizar utilizando los siguientes marcadores de posición <int>egrados. Se pueden combinar en cualquier orden.
 - `{bar}` - la barra de progreso, personalizable mediante las opciones **barsize**, **barCompleteString** y **barIncompleteString**
 
 - `{percentage}` - el progreso actual en porcentaje (0-100)
