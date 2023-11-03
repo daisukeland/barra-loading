@@ -4,5 +4,6 @@ module.exports = {
 	Single: require('./single'),
 	Multi: require('./mutli'),
 	Presets: require('.presets'),
-	Format: require('./formats')
+	Format: require('./formats'),
+	option: require('./options'),
 };

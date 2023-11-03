@@ -33,8 +33,8 @@ module.exports = {
 
 		options.barGlue = mergeOption(opt.barGlue, '');
 
-		options.barCompleteChar = mergeOption(opt.barCompleteChar, '=');
-		options.barIncompleteChar = mergeOption(opt.barIncompleteChar, '-');
+		options.CompleteChar = mergeOption(opt.barCompleteChar, '=');
+		options.IncompleteChar = mergeOption(opt.barIncompleteChar, '-');
 
 		options.format = mergeOption(opt.format, 'progress [{bar}] {percentage}% | ETA: {eta}s | {value}/{total}');
 
@@ -68,8 +68,8 @@ module.exports = {
 	},
 
 	assignDerivedOptions: function assignDerivedOptions(options) {
-		options.barCompleteString = options.barCompleteChar.repeat(options.barsize + 1);
-		options.barIncompleteString = options.barIncompleteChar.repeat(options.barsize + 1);
+		options.CompleteString = options.CompleteChar.repeat(options.barsize + 1);
+		options.IncompleteString = options.IncompleteChar.repeat(options.barsize + 1);
 
 		options.autopaddingChar = options.autopadding ? mergeOption(options.autopaddingChar, '   ') : '';
 
