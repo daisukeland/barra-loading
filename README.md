@@ -37,17 +37,23 @@ b1.stop();
 ```js
 const barLoad = require('barra-loading');
 
-// create a new progress bar instance and use shades_classic theme
-const bar1 = new barLoad.SingleBar({}, barLoad.Presets.shades_classic);
+// create new container
+const multibar = new barLoad.Multi({
+    clearOnComplete: false,
+    hideCursor: true,
+    format: ' {bar} | {filename} | {value}/{total}',
+});
 
-// start the progress bar with a total value of 200 and start value of 0
-bar1.start(200, 0);
+// add bars
+const b1 = multibar.create(10, 0);
+const b2 = multibar.create(60, 0);
 
-// update the current value in your application..
-bar1.update(100);
+// control bars
+b2.update(20, {filename: "text.zip"});
+b1.update(20, {filename: "helloworld.js"});
 
-// stop the progress bar
-bar1.stop();
+// stop all bars
+multibar.stop();
 ```
 
 Single Bar Mode
