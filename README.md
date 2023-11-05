@@ -198,3 +198,7 @@ const opt = {
 # Task 1     98/200 --[████████████████████]--
 # Task 1     200/200 --[████████████████████████████████████████]--
 ```
+
+```bash
+Receiving objects:   {percentage}% (value}/{total), {bytes} | {speed} KiB/s
+```
